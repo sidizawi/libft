@@ -6,7 +6,7 @@
 /*   By: szawi <szawi@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 11:45:31 by szawi             #+#    #+#             */
-/*   Updated: 2021/01/25 18:44:31 by szawi            ###   ########.fr       */
+/*   Updated: 2021/01/28 17:26:57 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,18 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	else if (!(sub = malloc(sizeof(char) * len + 1)))
-		return (NULL);
-	i = 0;
-	if (start < ft_strlen(s))
+	else if ((sub = malloc(sizeof(char) * len + 1)))
 	{
-		while (i < len && s[start + i])
+		i = 0;
+		if (start < ft_strlen(s))
 		{
-			sub[i] = s[start + i];
-			i++;
+			while (i < len && s[start + i])
+			{
+				sub[i] = s[start + i];
+				i++;
+			}
 		}
+		sub[i] = '\0';
 	}
-	sub[i] = '\0';
 	return (sub);
 }

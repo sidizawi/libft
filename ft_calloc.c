@@ -6,7 +6,7 @@
 /*   By: szawi <szawi@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 01:10:21 by szawi             #+#    #+#             */
-/*   Updated: 2021/01/27 17:56:16 by szawi            ###   ########.fr       */
+/*   Updated: 2021/01/28 14:19:23 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void	*ft_calloc(size_t count, size_t size)
 		while (len--)
 			tab[i++] = 0;
 	}
-	return ((void *)tab);
+	return (tab);
 }

@@ -6,7 +6,7 @@
 /*   By: szawi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 17:03:13 by szawi             #+#    #+#             */
-/*   Updated: 2021/01/26 18:39:01 by szawi            ###   ########.fr       */
+/*   Updated: 2021/01/28 12:08:39 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ int		fill_nb(int nb, const char *str, int sign)
 		i++;
 	}
 	if (i < 11)
-		nb *= (nb > 0 ? sign : 1);
-	else
-		nb *= sign;
+		nb *= (sign < 0 ? sign : 1);
 	return (nb);
 }
 

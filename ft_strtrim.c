@@ -6,7 +6,7 @@
 /*   By: szawi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 20:12:03 by szawi             #+#    #+#             */
-/*   Updated: 2021/01/21 16:44:29 by szawi            ###   ########.fr       */
+/*   Updated: 2021/01/28 18:06:08 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,17 +58,18 @@ char	*ft_strtrim(const char *s1, const char *set)
 	if (!s1 || !set)
 		return (NULL);
 	len = getlength(s1, set);
-	if (!(str = malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	while (in_set(*s1, set))
-		s1++;
-	i = 0;
-	while (!next_in_set(s1, set))
+	if ((str = malloc(sizeof(char) * (len + 1))))
 	{
-		str[i] = *s1;
-		s1++;
-		i++;
+		while (in_set(*s1, set))
+			s1++;
+		i = 0;
+		while (!next_in_set(s1, set))
+		{
+			str[i] = *s1;
+			s1++;
+			i++;
+		}
+		str[i] = '\0';
 	}
-	str[i] = '\0';
 	return (str);
 }
