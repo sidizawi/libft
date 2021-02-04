@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szawi <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:09:37 by szawi             #+#    #+#             */
-/*   Updated: 2021/01/28 16:05:53 by szawi            ###   ########.fr       */
+/*   Updated: 2021/02/02 20:48:22 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,13 @@ int		sublen(const char *s, char c)
 	return (len);
 }
 
-void	*free_tab(char **tab, int i)
+void	*free_tab(char **tab)
 {
 	int j;
 
 	j = 0;
-	while (j < i)
-	{
-		free(tab[j]);
-		j++;
-	}
+	while (tab[j])
+		free(tab[j++]);
 	free(tab);
 	return (NULL);
 }
@@ -79,7 +76,7 @@ char	**ft_split(const char *s, char c)
 		while (*s && *s == c)
 			s++;
 		if (!(tab[i] = malloc(sizeof(char) * sublen(s, c) + 1)))
-			return (free_tab(tab, i));
+			return (free_tab(tab));
 		j = 0;
 		while (*s && *s != c)
 			tab[i][j++] = *s++;

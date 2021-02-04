@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: szawi <marvin@42.fr>                       +#+  +:+       +#+         #
+#    By: szawi <szawi@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/18 18:21:52 by szawi             #+#    #+#              #
-#    Updated: 2021/01/21 14:25:39 by szawi            ###   ########.fr        #
+#    Updated: 2021/02/02 19:21:59 by szawi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS =	ft_isascii.c ft_memcmp.c ft_putnbr_fd.c ft_strlcat.c ft_strrchr.c \
 OBJS = ${SRCS:.c=.o}
 
 SRCS_BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-			 ft_lstclear.c ft_lstiter.c
+			 ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 BONUS = ${SRCS_BONUS:.c=.o}
 
@@ -50,6 +50,7 @@ fclean :	clean
 
 bonus: ${OBJS} ${BONUS}
 	ar -rcs ${NAME} ${OBJS} ${BONUS}
+	ranlib ${NAME}
 
 re : fclean all
 

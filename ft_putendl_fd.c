@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szawi <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 18:21:24 by szawi             #+#    #+#             */
-/*   Updated: 2021/01/26 15:10:51 by szawi            ###   ########.fr       */
+/*   Updated: 2021/02/02 20:47:09 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *str, int fd)
 {
-	if (str)
+	if (str && fd >= 0)
 	{
 		write(fd, str, ft_strlen(str));
 		write(fd, "\n", 1);

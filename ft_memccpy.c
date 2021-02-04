@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szawi <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 16:02:56 by szawi             #+#    #+#             */
-/*   Updated: 2021/01/28 17:40:05 by szawi            ###   ########.fr       */
+/*   Updated: 2021/02/02 20:45:40 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	s = (const char*)src;
 	d = (char*)dst;
 	i = 0;
-	while (i < n)
+	while (src && dst && i < n)
 	{
 		d[i] = (char)s[i];
 		i++;

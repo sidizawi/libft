@@ -6,7 +6,7 @@
 /*   By: szawi <szawi@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 22:14:50 by szawi             #+#    #+#             */
-/*   Updated: 2021/01/21 16:32:10 by szawi            ###   ########.fr       */
+/*   Updated: 2021/02/01 18:27:34 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstdelone(t_list *lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void*));
 t_list			*ft_lstlast(t_list *lst);
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*));
 t_list			*ft_lstnew(void *content);
 int				ft_lstsize(t_list *lst);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);

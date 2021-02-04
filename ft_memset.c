@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szawi <szawi@student.s19.be>               +#+  +:+       +#+        */
+/*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 12:29:00 by szawi             #+#    #+#             */
-/*   Updated: 2021/01/10 23:46:09 by szawi            ###   ########.fr       */
+/*   Updated: 2021/02/03 14:17:50 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t	i;
 	char	*str;
 
+	if (!n || !s)
+		return (s);
 	i = 0;
 	str = (char*)s;
 	while (i < n)
