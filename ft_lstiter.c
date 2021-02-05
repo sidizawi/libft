@@ -6,7 +6,7 @@
 /*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 14:40:39 by szawi             #+#    #+#             */
-/*   Updated: 2021/02/03 20:54:36 by szawi            ###   ########.fr       */
+/*   Updated: 2021/02/05 11:43:53 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void*))
 	{
 		while (lst)
 		{
-			(*f)(lst->content);
+			f(lst->content);
 			lst = lst->next;
 		}
 	}
