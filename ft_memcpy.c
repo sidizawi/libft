@@ -6,7 +6,7 @@
 /*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 00:01:42 by szawi             #+#    #+#             */
-/*   Updated: 2021/02/03 20:13:55 by szawi            ###   ########.fr       */
+/*   Updated: 2021/02/06 14:28:44 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	const char	*s;
 	char		*d;
 
-	if (!n || dst == src || !dst)
+	if (!n || !dst)
 		return (dst);
 	else if (!src)
 		return (NULL);

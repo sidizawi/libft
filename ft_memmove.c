@@ -6,7 +6,7 @@
 /*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 14:47:14 by szawi             #+#    #+#             */
-/*   Updated: 2021/02/03 20:28:09 by szawi            ###   ########.fr       */
+/*   Updated: 2021/02/06 14:28:54 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	const char	*s;
 	char		*d;
 
-	if (!len)
+	if (!len || dst == src)
 		return (dst);
 	else if (!src || !dst)
 		return (NULL);
