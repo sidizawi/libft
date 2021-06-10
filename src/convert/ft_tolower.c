@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szawi <szawi@student.s19.be>               +#+  +:+       +#+        */
+/*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 11:13:08 by szawi             #+#    #+#             */
-/*   Updated: 2021/01/21 19:05:35 by szawi            ###   ########.fr       */
+/*   Updated: 2021/06/10 19:46:31 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);

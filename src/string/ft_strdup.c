@@ -6,7 +6,7 @@
 /*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 18:29:50 by szawi             #+#    #+#             */
-/*   Updated: 2021/02/07 15:33:05 by szawi            ###   ########.fr       */
+/*   Updated: 2021/06/10 20:03:31 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strdup(const char *s1)
 
 	if (!s1)
 		return (NULL);
-	else if (!(str = malloc(sizeof(char) * (ft_strlen(s1) + 1))))
+	str = malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if (!str)
 		return (NULL);
 	i = 0;
 	while (s1[i])

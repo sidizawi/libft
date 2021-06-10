@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szawi <szawi@student.s19.be>               +#+  +:+       +#+        */
+/*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 10:46:07 by szawi             #+#    #+#             */
-/*   Updated: 2021/01/21 19:05:50 by szawi            ###   ########.fr       */
+/*   Updated: 2021/06/10 19:41:09 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);

@@ -6,7 +6,7 @@
 /*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 18:28:25 by szawi             #+#    #+#             */
-/*   Updated: 2021/02/07 15:33:05 by szawi            ###   ########.fr       */
+/*   Updated: 2021/06/10 19:47:17 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	t_list *curr;
+	t_list	*curr;
 
 	if (alst && new)
 	{

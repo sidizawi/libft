@@ -6,7 +6,7 @@
 /*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 17:50:12 by szawi             #+#    #+#             */
-/*   Updated: 2021/02/07 15:33:04 by szawi            ###   ########.fr       */
+/*   Updated: 2021/06/10 20:00:28 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	else if (!(str = malloc(sizeof(char) * ft_strlen(s) + 1)))
+	str = malloc(sizeof(char) * ft_strlen(s) + 1);
+	if (!str)
 		return (NULL);
 	i = 0;
 	while (s[i])

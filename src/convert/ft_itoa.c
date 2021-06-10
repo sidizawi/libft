@@ -6,17 +6,19 @@
 /*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 17:12:39 by szawi             #+#    #+#             */
-/*   Updated: 2021/02/07 15:33:05 by szawi            ###   ########.fr       */
+/*   Updated: 2021/06/10 20:04:31 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-int		nbr_length(long k)
+static int	ft_nbr_len(long k, int n)
 {
-	int		i;
+	int	i;
 
 	i = 0;
+	if (n <= 0)
+		i++;
 	while (k)
 	{
 		k /= 10;
@@ -26,7 +28,7 @@ int		nbr_length(long k)
 	return (i);
 }
 
-void	rev_dest(char *dest)
+static void	ft_rev_dest(char *dest)
 {
 	int		i;
 	int		size;
@@ -51,9 +53,11 @@ char	*ft_itoa(int n)
 	int		len;
 
 	k = n;
-	k *= (n < 0 ? -1 : 1);
-	len = nbr_length(k) + (n <= 0 ? 1 : 0);
-	if (!(dest = malloc(sizeof(char) * len)))
+	if (n < 0)
+		k *= -1;
+	len = ft_nbr_len(k, n);
+	dest = malloc(sizeof(char) * len);
+	if (!dest)
 		return (NULL);
 	i = 0;
 	if (!k)
@@ -66,6 +70,6 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		dest[i++] = '-';
 	dest[i] = '\0';
-	rev_dest(dest);
+	ft_rev_dest(dest);
 	return (dest);
 }

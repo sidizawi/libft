@@ -6,13 +6,13 @@
 /*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 17:03:13 by szawi             #+#    #+#             */
-/*   Updated: 2021/02/07 15:33:05 by szawi            ###   ########.fr       */
+/*   Updated: 2021/06/10 19:40:54 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-int		fill_nb(int nb, const char *str, int sign)
+static int	ft_fill_nb(int nb, const char *str, int sign)
 {
 	int	i;
 
@@ -26,16 +26,16 @@ int		fill_nb(int nb, const char *str, int sign)
 		nb = 0;
 	else if (i >= 19)
 		nb = -1;
-	else if (i < 11)
-		nb *= (sign < 0 ? sign : 1);
+	else if (i < 11 && sign < 0)
+		nb *= sign;
 	return (nb);
 }
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int i;
-	int nb;
-	int sign;
+	int	i;
+	int	nb;
+	int	sign;
 
 	i = 0;
 	sign = 1;
@@ -43,10 +43,12 @@ int		ft_atoi(const char *str)
 		return (0);
 	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
 		i++;
-	if (str[i] == '-' || str[i] == '+')
-		sign = (str[i++] == '-' ? -1 : 1);
+	if (str[i] == '-')
+		sign = -1;
+	if (str[i] == '+' || str[i] == '-')
+		i++;
 	nb = 0;
 	if (str[i] >= '0' && str[i] <= '9')
-		nb = fill_nb(nb, &str[i], sign);
+		nb = ft_fill_nb(nb, &str[i], sign);
 	return (nb);
 }

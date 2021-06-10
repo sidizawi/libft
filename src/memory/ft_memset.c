@@ -6,7 +6,7 @@
 /*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 12:29:00 by szawi             #+#    #+#             */
-/*   Updated: 2021/02/07 15:33:05 by szawi            ###   ########.fr       */
+/*   Updated: 2021/06/10 19:52:31 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	if (!n || !s)
 		return (s);
 	i = 0;
-	str = (char*)s;
+	str = (char *)s;
 	while (i < n)
 	{
 		str[i] = c;

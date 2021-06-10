@@ -6,13 +6,13 @@
 /*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 00:22:31 by szawi             #+#    #+#             */
-/*   Updated: 2021/02/07 15:33:04 by szawi            ###   ########.fr       */
+/*   Updated: 2021/06/10 19:38:05 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-int		ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	return (ft_isdigit(c) || ft_isalpha(c));
 }

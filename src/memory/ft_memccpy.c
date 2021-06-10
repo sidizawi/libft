@@ -6,7 +6,7 @@
 /*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 16:02:56 by szawi             #+#    #+#             */
-/*   Updated: 2021/02/07 15:33:05 by szawi            ###   ########.fr       */
+/*   Updated: 2021/06/10 19:52:19 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	const char		*s;
 	char			*d;
 
-	s = (const char*)src;
-	d = (char*)dst;
+	s = (const char *)src;
+	d = (char *)dst;
 	i = 0;
 	while (src && dst && i < n)
 	{

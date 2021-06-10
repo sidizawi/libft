@@ -6,7 +6,7 @@
 /*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 17:41:39 by szawi             #+#    #+#             */
-/*   Updated: 2021/02/07 15:33:04 by szawi            ###   ########.fr       */
+/*   Updated: 2021/06/10 19:58:22 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
-	int		last;
+	int	i;
+	int	last;
 
 	i = 0;
 	last = -1;
@@ -26,9 +26,9 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (s && s[i] == (char)c)
-		return ((char*)&s[i]);
+		return ((char *)&s[i]);
 	else if (!s || last < 0)
 		return (NULL);
 	else
-		return ((char*)&s[last]);
+		return ((char *)&s[last]);
 }

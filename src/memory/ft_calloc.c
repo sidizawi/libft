@@ -6,7 +6,7 @@
 /*   By: szawi <szawi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 01:10:21 by szawi             #+#    #+#             */
-/*   Updated: 2021/02/07 15:33:05 by szawi            ###   ########.fr       */
+/*   Updated: 2021/06/10 19:52:55 by szawi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ void	*ft_calloc(size_t count, size_t size)
 		len = 1;
 	else
 		len = size * count;
-	if (!(tab = malloc(len)))
+	tab = malloc(len);
+	if (!tab)
 		return (NULL);
 	i = 0;
 	while (len--)
